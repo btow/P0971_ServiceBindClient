@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">P0971_ServiceBindClient</string>
+    <string name="start_service">Start service</string>
+    <string name="stop_service">Stop service</string>
+    <string name="bind_to_servise">Bind to servise</string>
+    <string name="unbindnd_to_service">Unbindnd to service</string>
+    <string name="intent_name">Intent name</string>
+</resources>
