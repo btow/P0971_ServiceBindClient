@@ -4,5 +4,5 @@
     <string name="stop_service">Stop service</string>
     <string name="bind_to_servise">Bind to servise</string>
     <string name="unbindnd_to_service">Unbindnd to service</string>
-    <string name="intent_name">Intent name</string>
+    <string name="intent_filter_name">com.example.samsung.p0973_servicebindserver.MyService</string>
 </resources>

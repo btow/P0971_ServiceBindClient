@@ -9,6 +9,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import static android.widget.Toast.LENGTH_SHORT;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,13 +27,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        intent = new Intent(getString(R.string.intent_name));
+        intent = new Intent(getString(R.string.intent_filter_name));
 
         serviceConnection = new ServiceConnection() {
             @Override
             public void onServiceConnected(ComponentName name, IBinder service) {
                 message = "MainActivity onServiceConnected()";
                 Log.d(LOG_TAG, message);
+                Toast.makeText(MainActivity.this, message, LENGTH_SHORT).show();
                 bound = true;
             }
 
@@ -38,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             public void onServiceDisconnected(ComponentName name) {
                 message = "MainActivity onServiceDisconnected()";
                 Log.d(LOG_TAG, message);
+                Toast.makeText(MainActivity.this, message, LENGTH_SHORT).show();
                 bound = false;
             }
         };
