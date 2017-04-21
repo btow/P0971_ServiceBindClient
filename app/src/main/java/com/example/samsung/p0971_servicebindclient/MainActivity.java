@@ -65,7 +65,10 @@ public class MainActivity extends AppCompatActivity {
                 stopService(intent);
                 break;
             case R.id.btnBind:
-                bindService(intent, serviceConnection, BIND_AUTO_CREATE);
+                //Автоматический запуск сервиса при попытке подключения к нему, если он не был запущен ранее.
+//                bindService(intent, serviceConnection, BIND_AUTO_CREATE);
+                //Попытка подключения к сервису без флага автоматического запуска, если он не был запущен ранее.
+                bindService(intent, serviceConnection, 0);
                 break;
             case R.id.btnUnBind:
                 if (!bound) return;
